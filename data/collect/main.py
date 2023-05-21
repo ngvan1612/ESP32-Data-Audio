@@ -14,5 +14,5 @@
 
 from audio.AudioLabeling import AudioLabeling
 
-labeling = AudioLabeling(5)
-labeling.begin('output_data')
+labeling = AudioLabeling(60)
+labeling.re_config('output_data/van.01.60s')
