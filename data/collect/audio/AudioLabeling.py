@@ -1,7 +1,9 @@
-from ..esp32.udp_audio import Esp32AudioUDP
 from .AudioProcessing import AudioProcessing
+from .udp_audio import Esp32AudioUDP
+from pydub.playback import play
 import json
 import os
+import numpy as np
 
 class AudioLabeling:
     
@@ -12,7 +14,7 @@ class AudioLabeling:
   
   def begin(self, output_dir):
     print("Ghi đầu ra:", self.seconds, "giây")
-    label_name = input('Nhập tên nhãn').strip()
+    label_name = input('Nhập tên nhãn: ').strip()
 
     if not label_name:
       print('Tên nhãn không được trống!')
@@ -35,11 +37,12 @@ class AudioLabeling:
 
     output_arr = []
 
-    for i, chunks in enumerate(chunks):
-      AudioProcessing.write_wav(data, os.path.join(out, f"audio.chunk.{i}.mp3"))
+    for i, chunk in enumerate(chunks):
+      AudioProcessing.write_wav(np.array(chunk.get_array_of_samples()), os.path.join(out, f"audio.chunk.{i}.mp3"))
+      play(chunk)
 
       while True:
-        answer = input('Đúng không? [y/n]').strip().lower()
+        answer = input('Đúng không? [y/n]: ').strip().lower()
         if answer in ['y', 'n']:
           break
 

@@ -39,5 +39,4 @@ class AudioProcessing:
         keep_silence=200
       )
 
-      print(chunks)
       return chunks
