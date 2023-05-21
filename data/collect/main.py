@@ -12,4 +12,7 @@
 
 # #   answer = input('Is correct?')
 
+from audio.AudioLabeling import AudioLabeling
 
+labeling = AudioLabeling(5)
+labeling.begin('output_data')
