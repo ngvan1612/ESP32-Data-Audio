@@ -18,7 +18,7 @@ reverse_labels = {
     labels[x]: x for x in labels
 }
 
-model = load_model('ahihi.h5')
+model = load_model('audio-model.h5')
 model.summary()
 
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
