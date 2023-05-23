@@ -11,7 +11,9 @@ import noisereduce as nr
 labels = {
     'silent': 0,
     'tien': 1,
-    'lui': 2
+    'lui': 2,
+    'trai': 3,
+    'phai': 4
 }
 
 reverse_labels = {
