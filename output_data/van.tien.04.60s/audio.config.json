@@ -33,7 +33,7 @@
   },
   {
     "chunk": 8,
-    "accepted": true
+    "accepted": false
   },
   {
     "chunk": 9,
@@ -41,11 +41,11 @@
   },
   {
     "chunk": 10,
-    "accepted": true
+    "accepted": false
   },
   {
     "chunk": 11,
-    "accepted": true
+    "accepted": false
   },
   {
     "chunk": 12,
@@ -53,7 +53,7 @@
   },
   {
     "chunk": 13,
-    "accepted": true
+    "accepted": false
   },
   {
     "chunk": 14,
@@ -65,7 +65,7 @@
   },
   {
     "chunk": 16,
-    "accepted": true
+    "accepted": false
   },
   {
     "chunk": 17,
@@ -109,7 +109,7 @@
   },
   {
     "chunk": 27,
-    "accepted": true
+    "accepted": false
   },
   {
     "chunk": 28,
@@ -145,7 +145,7 @@
   },
   {
     "chunk": 36,
-    "accepted": true
+    "accepted": false
   },
   {
     "chunk": 37,
@@ -157,7 +157,7 @@
   },
   {
     "chunk": 39,
-    "accepted": true
+    "accepted": false
   },
   {
     "chunk": 40,

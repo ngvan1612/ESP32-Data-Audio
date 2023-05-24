@@ -77,7 +77,7 @@
   },
   {
     "chunk": 19,
-    "accepted": true
+    "accepted": false
   },
   {
     "chunk": 20,
@@ -109,23 +109,23 @@
   },
   {
     "chunk": 27,
-    "accepted": true
+    "accepted": false
   },
   {
     "chunk": 28,
-    "accepted": true
+    "accepted": false
   },
   {
     "chunk": 29,
-    "accepted": true
+    "accepted": false
   },
   {
     "chunk": 30,
-    "accepted": true
+    "accepted": false
   },
   {
     "chunk": 31,
-    "accepted": true
+    "accepted": false
   },
   {
     "chunk": 32,
@@ -161,6 +161,6 @@
   },
   {
     "chunk": 40,
-    "accepted": true
+    "accepted": false
   }
 ]
