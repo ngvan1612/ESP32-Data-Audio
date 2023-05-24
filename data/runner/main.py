@@ -33,6 +33,7 @@ while len(wav_test) < seconds * 16000 * 2:
   message, _ = server_socket.recvfrom(1000)
   data = list(message)
   assert len(data) == 1000
+  #server_socket.sendto('hello'.encode('utf-8'), ("192.168.45.82", 1235))
   wav_test.extend(data)
 
   if len(wav_test) == 16000 * 2 * 5:
@@ -67,5 +68,7 @@ while len(wav_test) < seconds * 16000 * 2:
         arr_df = np.array([mel_spectrogram.numpy()])
         pred = model.predict(arr_df, verbose=None)[0]
         pos = np.argmax(pred)
+        if pred[pos] > 0.5:
+          server_socket.sendto(str(pos).encode('utf-8'), ("192.168.45.82", 1235))
         print(i, 'predict', reverse_labels[pos], 'with acc=', int(pred[pos] * 100 * 100) / 100, '%')
     wav_test = []
