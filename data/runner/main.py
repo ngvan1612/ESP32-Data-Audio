@@ -65,7 +65,7 @@ while len(wav_test) < seconds * 16000 * 2:
         spectrogram = tfio.audio.spectrogram(tensor, nfft=512, window=512, stride=256)
         mel_spectrogram = tfio.audio.melscale(spectrogram, rate=16000, mels=128, fmin=32, fmax=8000)
         arr_df = np.array([mel_spectrogram.numpy()])
-        pred = model.predict(arr_df)[0]
+        pred = model.predict(arr_df, verbose=None)[0]
         pos = np.argmax(pred)
         print(i, 'predict', reverse_labels[pos], 'with acc=', int(pred[pos] * 100 * 100) / 100, '%')
     wav_test = []
