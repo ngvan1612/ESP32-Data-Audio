@@ -35,7 +35,7 @@ while len(wav_test) < seconds * 16000 * 2:
   assert len(data) == 1000
   wav_test.extend(data)
 
-  if len(wav_test) == 16000 * 2 * 3:
+  if len(wav_test) == 16000 * 2 * 5:
     s = io.BytesIO(bytes(wav_test))
     buffer = AudioSegment.from_raw(s, sample_width=2, frame_rate=16000, channels=1)
     buffer = np.array(buffer.get_array_of_samples())
